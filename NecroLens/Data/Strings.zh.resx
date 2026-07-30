@@ -400,4 +400,17 @@ It helps me to identify problems faster.</value>
   <data name="ConfigWindow_Language_default" xml:space="preserve">
       <value>客戶端語言</value>
   </data>
+  <data name="ConfigWindow_DataCollection_OptIn" xml:space="preserve">
+    <value>同意加入資料收集</value>
+  </data>
+  <data name="ConfigWindow_DataCollection_Description" xml:space="preserve">
+    <value>啟用資料收集，協助我改善 NecroLens。
+這會以匿名方式將每個敵人及其他部分物件的資訊傳送到我的伺服器。
+其中只包含各樓層的敵人與物件 ID、名稱，以及用於區分資料的「隊伍 ID」。
+
+絕對不會收集任何可連結到玩家或帳號的資訊。</value>
+  </data>
+  <data name="ConfigWindow_LocalizationHelp" xml:space="preserve">
+    <value>想協助本地化嗎？</value>
+  </data>
 </root>

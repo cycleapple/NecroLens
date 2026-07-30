@@ -875,5 +875,36 @@ namespace NecroLens.Data {
                 return ResourceManager.GetString("Traps_Unknown", resourceCulture);
             }
         }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Opt-In Data Collection.
+        /// </summary>
+        internal static string ConfigWindow_DataCollection_OptIn {
+            get {
+                return ResourceManager.GetString("ConfigWindow_DataCollection_OptIn", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Help me improve NecroLens by enabling data collection.
+        /// This will send information about every enemy and some other objects anonymously to my server.
+        /// It contains only enemy and object id's and names per floor and a 'party-id' for separation.
+        ///
+        /// Absolutely no information linking to any players or accounts will be collected..
+        /// </summary>
+        internal static string ConfigWindow_DataCollection_Description {
+            get {
+                return ResourceManager.GetString("ConfigWindow_DataCollection_Description", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Want to help with localization?.
+        /// </summary>
+        internal static string ConfigWindow_LocalizationHelp {
+            get {
+                return ResourceManager.GetString("ConfigWindow_LocalizationHelp", resourceCulture);
+            }
+        }
     }
 }

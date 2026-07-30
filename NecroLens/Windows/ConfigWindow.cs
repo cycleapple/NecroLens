@@ -73,7 +73,7 @@ public class ConfigWindow() : Window(Strings.ConfigWindow_Title, ImGuiWindowFlag
         ImGui.Spacing();
         ImGui.SameLine();
         
-        if (ImGui.Button("Want to help with localization?"))
+        if (ImGui.Button(Strings.ConfigWindow_LocalizationHelp))
             Process.Start(new ProcessStartInfo
                               { FileName = "https://crowdin.com/project/necrolens", UseShellExecute = true });
         if (ImGui.BeginTabBar("MyTabBar", ImGuiTabBarFlags.None))
@@ -109,7 +109,7 @@ public class ConfigWindow() : Window(Strings.ConfigWindow_Title, ImGuiWindowFlag
     private void DrawDebugTab()
     {
         var optInCollection = conf.OptInDataCollection;
-        if (ImGui.Checkbox("Opt-In Data Collection", ref optInCollection))
+        if (ImGui.Checkbox(Strings.ConfigWindow_DataCollection_OptIn, ref optInCollection))
         {
             conf.OptInDataCollection = optInCollection;
             if (conf.OptInDataCollection && conf.UniqueId == null)
@@ -120,10 +120,7 @@ public class ConfigWindow() : Window(Strings.ConfigWindow_Title, ImGuiWindowFlag
         }
 
         ImGui.Indent(15);
-        ImGui.Text("Help me improve NecroLens by enabling data collection.\n" +
-                   "This will send information about every enemy and some other objects anonymously to my server.\n" +
-                   "It contains only enemy and object id's and names per floor and a \'party-id\' for separation.\n\n" +
-                   "Absolutely no information linking to any players or accounts will be collected.");
+        ImGui.Text(Strings.ConfigWindow_DataCollection_Description);
         ImGui.Unindent(15);
         
         ImGui.Separator();

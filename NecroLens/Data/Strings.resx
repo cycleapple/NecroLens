@@ -400,4 +400,17 @@ It helps me to identify problems faster.</value>
   <data name="ConfigWindow_Language_default" xml:space="preserve">
       <value>Client-Language</value>
   </data>
+  <data name="ConfigWindow_DataCollection_OptIn" xml:space="preserve">
+    <value>Opt-In Data Collection</value>
+  </data>
+  <data name="ConfigWindow_DataCollection_Description" xml:space="preserve">
+    <value>Help me improve NecroLens by enabling data collection.
+This will send information about every enemy and some other objects anonymously to my server.
+It contains only enemy and object id's and names per floor and a 'party-id' for separation.
+
+Absolutely no information linking to any players or accounts will be collected.</value>
+  </data>
+  <data name="ConfigWindow_LocalizationHelp" xml:space="preserve">
+    <value>Want to help with localization?</value>
+  </data>
 </root>
