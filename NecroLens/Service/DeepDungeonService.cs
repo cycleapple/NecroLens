@@ -33,7 +33,7 @@ public class DeepDungeonService : IDisposable
     public readonly Dictionary<Pomander, string> PomanderNames;
     
     private const string ActorControlSig = "E8 ?? ?? ?? ?? 0F B7 0B 83 E9 64";
-    private delegate void ActorControlSelfDelegate(uint category, uint eventId, uint param1, uint param2, uint param3, uint param4, uint param5, uint param6, ulong targetId, byte param7);
+    private delegate void ActorControlSelfDelegate(uint category, uint eventId, uint param1, uint param2, uint param3, uint param4, uint param5, uint param6, uint extra7, uint extra8, ulong targetId, byte param7);
     private Hook<ActorControlSelfDelegate>? actorControlSelfHook;
     
     
@@ -138,9 +138,9 @@ public class DeepDungeonService : IDisposable
         FloorTimes[FloorDetails.CurrentFloor] = time;
     }
 
-    private void ActorControlSelf(uint category, uint eventId, uint param1, uint param2, uint param3, uint param4, uint param5, uint param6, ulong targetId, byte param7)
+    private void ActorControlSelf(uint category, uint eventId, uint param1, uint param2, uint param3, uint param4, uint param5, uint param6, uint extra7, uint extra8, ulong targetId, byte param7)
     {
-        actorControlSelfHook!.Original(category, eventId, param1, param2, param3, param4, param5, param6, targetId, param7);
+        actorControlSelfHook!.Original(category, eventId, param1, param2, param3, param4, param5, param6, extra7, extra8, targetId, param7);
 
         if (eventId == 100 && !Ready && DeepDungeonContentInfo.ContentInfo.TryGetValue((int)param2, out var info))
             EnterDeepDungeon((int)param2, info);
